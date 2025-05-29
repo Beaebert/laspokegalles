@@ -12,11 +12,11 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: blueviolet;
   color: white;
   padding: 1em;
   text-align: center;
-  font-family: 'Sour Gummy', serif;
+  font-family: 'Sour Gummy', cursive;
 }
 
 nav ul {
