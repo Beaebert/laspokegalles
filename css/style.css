@@ -1,5 +1,7 @@
 /* Importar la fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 body {
   font-family: sans-serif;
@@ -14,6 +16,7 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+  font-family: 'Sour Gummy', serif;
 }
 
 nav ul {
