@@ -79,6 +79,52 @@ footer {
   width: 100%;
 }
 
+/* Dropdown Menu Styles */
+nav ul li {
+  position: relative; /* Needed for absolute positioning of the dropdown */
+  display: inline-block; /* Or inline-flex, if inline causes issues */
+}
+
+nav ul li .dropdown-arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent item */
+  left: 0;
+  background-color: blueviolet; /* Match header or use a contrasting color */
+  padding: 10px;
+  list-style: none;
+  margin-top: 5px; /* Space between parent and dropdown */
+  z-index: 1000; /* Ensure it's above other elements */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+nav ul li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 5px 0; /* Spacing between dropdown items */
+}
+
+.dropdown-menu li a {
+  color: white; /* Link color for dark background */
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #5a0e91; /* Slightly lighter/darker shade for hover */
+  color: #fff; /* Ensure text color remains readable */
+}
+
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .galleta {
