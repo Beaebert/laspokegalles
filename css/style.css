@@ -79,6 +79,19 @@ footer {
   width: 100%;
 }
 
+.carrito {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .galleta {
