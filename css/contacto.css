@@ -1,14 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-
-header {
-  background-color: blueviolet;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  font-family: 'Sour Gummy', cursive;
-}
-
 .formulario-contacto {
   background-color: #f9f9f9;
   padding: 30px;
