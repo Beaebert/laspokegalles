@@ -18,7 +18,9 @@ header {
   text-align: center;
   font-family: 'Sour Gummy', cursive;
 }
-
+h1 {
+  font-size: 7em;
+}
 nav ul {
   list-style: none;
   padding: 0;

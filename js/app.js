@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const galeria = document.querySelector('.galeria-galletas');
-  const listaCarrito = document.querySelector('#lista-carrito');
-  const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+  const listaCarrito = document.querySelector('#listaCarrito');
+  const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
   let carrito = [];
 
   galeria.addEventListener('click', agregarProducto);
