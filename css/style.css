@@ -23,10 +23,13 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
 nav ul li {
-  display: inline;
   margin: 0 1em;
 }
 
@@ -60,6 +63,11 @@ main {
   text-align: center;
   width: calc(33% - 40px); /* Aproximadamente un tercio del ancho con márgenes */
   box-sizing: border-box; /* Incluye el padding y el border en el ancho */
+}
+
+.galleta-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .galleta img {
