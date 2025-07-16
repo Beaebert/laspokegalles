@@ -33,20 +33,24 @@
   <section class="formulario-contacto">
     <h2>¡Contáctanos!</h2>
     <p>¿Tienes alguna pregunta o te gustaría hacer un pedido especial? ¡Escríbenos!</p>
-    <form action="#" method="POST">
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      </div>
-      <button type="submit">Enviar Mensaje</button>
+    <form
+      action="https://formspree.io/f/mvgqodpj"
+      method="POST"
+    >
+      <label>
+        Tu Nombre:
+        <input id="nombre" type="name" name="name" required>
+      </label>
+      <label>
+        Tu Email:
+        <input id="email" type="email" name="email" required>
+      </label>
+      <label>
+        Tu Mensaje:
+        <textarea id="mensaje" name="message" required></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
     </form>
   </section>
 </main>

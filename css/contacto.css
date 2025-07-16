@@ -16,34 +16,23 @@
   color: #333;
 }
 
-.formulario-contacto p {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #555;
-}
 
-.form-group {
+label {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.form-group label {
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+label input[type="text"],
+label input[type="email"],
+label input[type="message"] {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 1em;
 }
 
-.form-group textarea {
+label textarea {
   min-height: 150px;
   resize: vertical;
 }

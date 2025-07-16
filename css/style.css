@@ -19,22 +19,28 @@ header {
   font-family: 'Sour Gummy', cursive;
 }
 h1 {
-  font-size: 7em;
+  font-size: 4em;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;            /* Color de fuente */
+  font-size: 1em;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 nav ul {
-  list-style: none;
-  padding: 0;
+  display: flex;
+  list-style: none;       /*quita los puntitos de la lista */
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 1em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+  margin: 0 10px;
 }
 
 main {
