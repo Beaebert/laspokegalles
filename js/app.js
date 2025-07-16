@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
   let carrito = [];
 
+  localStorage.setItem('carrito', JSON.stringify(carrito));
   galeria.addEventListener('click', agregarProducto);
   listaCarrito.addEventListener('click', eliminarProducto);
   vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
