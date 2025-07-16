@@ -1,0 +1,101 @@
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: blueviolet;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-family: 'Sour Gummy', cursive;
+}
+h1 {
+  font-size: 4em;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;            /* Color de fuente */
+  font-size: 1em;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;       /*quita los puntitos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Press Start 2P', cursive; /* Aplicar la tipografía */
+}
+
+.galeria-galletas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.galleta {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: calc(33% - 40px); /* Aproximadamente un tercio del ancho con márgenes */
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho */
+}
+
+.galleta img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  position: sticky; /* Se pega al final si no hay suficiente contenido */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .galleta {
+    width: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .galleta {
+    width: 100%; /* Una columna en pantallas pequeñas */
+  }
+}

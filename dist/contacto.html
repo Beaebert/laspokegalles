@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - PokeGalles</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+  <script src="js/app.js"></script>
+<header>
+  <h1>PokeGalles</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li>
+          Productos <span class="dropdown-arrow">▼</span>
+          <ul class="dropdown-menu">
+            <li><a href="cajas-x6.html">cajas x6</a></li>
+            <li><a href="cajas-x12.html">cajas x12</a></li>
+            <li><a href="otras-tematicas.html">otras temáticas</a></li>
+            <li><a href="caja-personalizada.html">caja personalizada</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+</header>
+<main>
+  <section class="formulario-contacto">
+    <h2>¡Contáctanos!</h2>
+    <p>¿Tienes alguna pregunta o te gustaría hacer un pedido especial? ¡Escríbenos!</p>
+    <form
+      action="https://formspree.io/f/mvgqodpj"
+      method="POST"
+    >
+      <label>
+        Tu Nombre:
+        <input id="nombre" type="name" name="name" required>
+      </label>
+      <label>
+        Tu Email:
+        <input id="email" type="email" name="email" required>
+      </label>
+      <label>
+        Tu Mensaje:
+        <textarea id="mensaje" name="message" required></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>© 2025 PokeGalles</p>
+</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
