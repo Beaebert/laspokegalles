@@ -7,7 +7,6 @@
   <title>PokeGalles</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
-
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -17,14 +16,13 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 
 </head>
 
 <body>
-  <script src="js/app.js"></script>
+  <script src="js/app.js" defer></script> <!-- defer indica que se ejecute el script luego de la carga del HTML -->
 
   <header>
     <h1>PokeGalles</h1>
@@ -32,14 +30,14 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li>
-          Productos <span class="dropdown-arrow">▼</span>
-          <ul class="dropdown-menu">
-            <li><a href="cajas-x6.html">cajas x6</a></li>
-            <li><a href="cajas-x12.html">cajas x12</a></li>
-            <li><a href="otras-tematicas.html">otras temáticas</a></li>
-            <li><a href="caja-personalizada.html">caja personalizada</a></li>
-          </ul>
+        <li class="dropdown-arrow">
+          Productos <span>▼</span>
+            <ul class="dropdown-menu">
+              <li><a href="cajas-x6.html">cajas x6</a></li>
+              <li><a href="cajas-x12.html">cajas x12</a></li>
+              <li><a href="otras-tematicas.html">otras temáticas</a></li>
+              <li><a href="caja-personalizada.html">caja personalizada</a></li>
+            </ul>
         </li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -64,7 +62,7 @@
         <button class="agregar-carrito" data-id="2">Agregar al Carrito</button>
       </div>
       <div class="galleta">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Galleta de Squirtle">
+        <img src="img/bolsita_squirtle.jpg" alt="Galleta de Squirtle">
         <p>Caja de Squirtle</p>
         <button class="agregar-carrito" data-id="3">Agregar al Carrito</button>
       </div>

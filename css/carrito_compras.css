@@ -1,52 +1,5 @@
 
-.formulario-contacto {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Un poco más grande */
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-}
 
-.formulario-contacto h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.formulario-contacto p {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
 
 button[type="submit"] {
   background-color: #28a745;

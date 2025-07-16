@@ -43,6 +43,27 @@ nav ul li {
   margin: 0 10px;
 }
 
+/* Selecciona todos los <a> que están dentro del nav */
+nav a {
+  text-decoration: none; /* Quita la línea de abajo (subrayado) */
+  color: inherit; /* Establece un color. 'inherit' hace que herede el color de su padre (li) */
+}
+/* Sobre el menu desplegable de productos: */
+.dropdown-arrow {
+  position: relative; /* ¡Muy importante! */
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: blueviolet;
+  min-width: 160px;
+}
+/* Clase que usará JavaScript para mostrar el submenú */
+.dropdown-menu.visible {
+  display: block;
+}
 main {
   padding: 20px;
 }
@@ -99,3 +120,4 @@ footer {
     width: 100%; /* Una columna en pantallas pequeñas */
   }
 }
+

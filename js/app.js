@@ -1,14 +1,48 @@
+// --- LÓGICA PARA EL MENÚ  ---
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownArrow = document.querySelector('.dropdown-arrow');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  // Asegurarse de que los elementos existen antes de añadir eventos
+  if (dropdownArrow && dropdownMenu) {
+    dropdownArrow.addEventListener('mouseenter', function() {
+      dropdownMenu.classList.add('visible');
+    });
+
+    dropdownArrow.addEventListener('mouseleave', function() {
+      dropdownMenu.classList.remove('visible');
+    });
+  }
+});
+
+// --- LÓGICA DEL CARRITO ---
 document.addEventListener('DOMContentLoaded', () => {
+  // Selectores
   const galeria = document.querySelector('.galeria-galletas');
   const listaCarrito = document.querySelector('#listaCarrito');
   const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
-  let carrito = [];
 
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-  galeria.addEventListener('click', agregarProducto);
-  listaCarrito.addEventListener('click', eliminarProducto);
-  vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+  // Variable del carrito.
+  // Carga el carrito desde localStorage
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+  // --- EVENT LISTENERS ---
+  // Solo agregar event listener a la galería si existe en la página actual
+  if (galeria) {
+    galeria.addEventListener('click', agregarProducto);
+  }
+
+  // Solo agregar event listener al carrito si existe
+  if (listaCarrito) {
+    listaCarrito.addEventListener('click', eliminarProducto);
+  }
+
+  // Solo agregar event listener al botón de vaciar si existe
+  if (vaciarCarritoBtn) {
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+  }
+
+  // --- FUNCIONES ---
   function agregarProducto(e) {
     e.preventDefault();
     if (e.target.classList.contains('agregar-carrito')) {
@@ -22,13 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.classList.contains('borrar-producto')) {
       const productoId = e.target.getAttribute('data-id');
       carrito = carrito.filter(producto => producto.id !== productoId);
-      carritoHTML();
+      carritoHTML(); // Actualiza la vista
     }
   }
 
   function vaciarCarrito() {
     carrito = [];
     limpiarHTML();
+    guardarCarritoEnStorage(); // Actualiza el storage
   }
 
   function leerDatosProducto(producto) {
@@ -41,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const existe = carrito.some(producto => producto.id === infoProducto.id);
     if (existe) {
+      // Actualizamos la cantidad
       const productos = carrito.map(producto => {
         if (producto.id === infoProducto.id) {
           producto.cantidad++;
@@ -51,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       carrito = [...productos];
     } else {
+      // Agregamos el elemento al carrito
       carrito = [...carrito, infoProducto];
     }
     carritoHTML();
@@ -58,21 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function carritoHTML() {
     limpiarHTML();
-    carrito.forEach(producto => {
-      const row = document.createElement('li');
-      row.innerHTML = `
-        <img src="${producto.imagen}" width="50">
-        <p>${producto.titulo}</p>
-        <p>${producto.cantidad}</p>
-        <a href="#" class="borrar-producto" data-id="${producto.id}"> X </a>
-      `;
-      listaCarrito.appendChild(row);
-    });
+    if (listaCarrito) {
+      carrito.forEach(producto => {
+        const row = document.createElement('tr'); // Usamos <tr> para una tabla
+        row.innerHTML = `
+                <td><img src="${producto.imagen}" width="80"></td>
+                <td>${producto.titulo}</td>
+                <td>${producto.cantidad}</td>
+                <td><a href="#" class="borrar-producto" data-id="${producto.id}"> ❌ </a></td>
+            `;
+        listaCarrito.appendChild(row);
+      });
+    }
+    //Guardar en LocalStorage cada vez que se actualiza el HTML
+    guardarCarritoEnStorage();
+  }
+
+  function guardarCarritoEnStorage() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
   }
 
   function limpiarHTML() {
-    while (listaCarrito.firstChild) {
-      listaCarrito.removeChild(listaCarrito.firstChild);
+    if (listaCarrito) {
+      while (listaCarrito.firstChild) {
+        listaCarrito.removeChild(listaCarrito.firstChild);
+      }
     }
   }
+
+  // Llama a carritoHTML al cargar la página para mostrar los productos del storage
+  carritoHTML();
 });

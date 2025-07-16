@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Carrito de Compras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - PokeGalles</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/carrito_compras.css">
 </head>
 <body>
+
+<!-- Header para consistencia de todas las paginas -->
+<header>
+  <h1>PokeGalles</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">Quiénes somos</a></li>
+      <li class="dropdown-arrow">
+        Productos <span>▼</span>
+        <ul class="dropdown-menu">
+          <li><a href="cajas-x6.html">cajas x6</a></li>
+          <li><a href="cajas-x12.html">cajas x12</a></li>
+          <li><a href="otras-tematicas.html">otras temáticas</a></li>
+          <li><a href="caja-personalizada.html">caja personalizada</a></li>
+        </ul>
+      </li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <li><a href="carrito_compras.html" class="cart-icon"> <img src="img/shopping_basket.png" alt="Carrito de compras"/> </a></li>
+  </nav>
+</header>
+
+<main>
+  <h2>Tu Carrito de Compras</h2>
+  <section id="carrito" class="carrito-container">
+    <!-- Tabla para mostrar los productos de forma ordenada -->
+    <table id="tabla-carrito">
+      <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody id="listaCarrito">
+      <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+      </tbody>
+    </table>
+    <button id="vaciarCarrito" class="boton-vaciar">Vaciar Carrito</button>
+  </section>
+</main>
+
+
+<footer>
+  <p>© 2025 PokeGalles</p>
+</footer>
+
+<!-- El script se carga al final -->
 <script src="js/app.js"></script>
-<section id="carrito" class="carrito">
-  <ul id="listaCarrito">
-    <!-- Los productos del carrito se agregarán aquí -->
-  </ul>
-  <button id="vaciarCarrito">Vaciar Carrito</button>
-</section>
 </body>
 </html>
