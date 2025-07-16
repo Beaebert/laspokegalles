@@ -13,3 +13,5 @@ Se utilizaron herramientas de consulta como la documentación instructiva aporta
 el asistente Jules de Google para construir la base de algunas funciones, y el hosting Vercel para el deploy.
 
 El curso Front End de Talento Tech finalizo en Julio 2025, se seguira desarrollando este proyecto después del curso.
+
+*Queda preparar la Base de Datos de Productos, posiblemente NoSQL para manejar las imagenes con los datos*
