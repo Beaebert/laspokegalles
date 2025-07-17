@@ -38,7 +38,12 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
+.cart-icon {
+  display: flex;
+  list-style: none;       /*quita los puntitos de la lista */
+  margin: 0;
+  padding: 0;
+}
 nav ul li {
   margin: 0 10px;
 }
@@ -47,6 +52,7 @@ nav ul li {
 nav a {
   text-decoration: none; /* Quita la línea de abajo (subrayado) */
   color: inherit; /* Establece un color. 'inherit' hace que herede el color de su padre (li) */
+  list-style: none;
 }
 /* Sobre el menu desplegable de productos: */
 .dropdown-arrow {

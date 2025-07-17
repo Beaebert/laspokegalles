@@ -3,8 +3,23 @@
 
 * Se trata de un sitio web de venta y pedido de productos, en este caso de galletitas tematicas.
 * Tiene un menú de navegación que permite volver a la pantalla de inicio, ver información de la página, ver un listado de productos, ponerse en contacto, y el enlace al carrito de compras (con el icono).
-* El formulario de contacto fue realizado Formspree (Formspree.io) como es solicitado para la entrega del Curso Front End.
+* El formulario de contacto fue realizado con Formspree (Formspree.io) y agregandole verificación de datos con JavaScript, como es solicitado para la entrega del Curso Front End.
 * El carrito de compras mantiene la información en el navegador con LocalStorage como es solicitado para la entrega del Curso Front End.
+
+<h4> Visualización en dispositivos medianos (notebook, monitores) </h4>
+
+<h5> Aspecto de las validaciones visualmente</h5>
+
+![web_validacion.JPG](img/web_validacion.JPG)
+
+
+![web_principal.JPG](img/web_principal.JPG)
+
+<h4>Visualización en dispositivos pequeños</h4>
+
+![web_celu1.jpg](img/web_celu1.jpg)
+
+![web_celu2.jpg](img/web_celu2.jpg)
 
 
 
