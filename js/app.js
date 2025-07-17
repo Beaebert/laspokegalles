@@ -126,3 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Llama a carritoHTML al cargar la página para mostrar los productos del storage
   carritoHTML();
 });
+
+//LOGICA DE FORMULARIO
+

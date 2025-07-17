@@ -1,10 +1,9 @@
-
 .formulario-contacto {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Un poco más grande */
+  max-width: 800px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -16,22 +15,21 @@
   color: #333;
 }
 
-
+/* Estructura de los campos del formulario */
 label {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  position: relative; /* Necesario para posicionar el ícono */
 }
-
-label input[type="text"],
-label input[type="email"],
-label input[type="message"] {
+label input,
+label textarea {
   padding: 12px;
-  border: 1px solid #000;
+  border: 1px solid #ccc; /* Borde por defecto */
   border-radius: 4px;
   font-size: 1em;
+  margin-top: 5px;
 }
-
 label textarea {
   min-height: 150px;
   resize: vertical;
@@ -46,11 +44,51 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 1.1em;
   transition: background-color 0.3s ease;
-  align-self: flex-start; /* Alinea el botón al inicio (izquierda en este caso) */
+  align-self: flex-start;
 }
 
 button[type="submit"]:hover {
   background-color: #218838;
+}
+
+/* VALIDACIÓN DE FORMULARIO */
+/* Oculta el ícono por defecto */
+.validation-icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 40px; /* Ajusta la posición verticalmente para que quede centrado en el input */
+}
+/* Cuando el LABEL tiene la clase 'valid', se aplican estos estilos */
+label.valid input,
+label.valid textarea {
+  border: 2px solid #2ecc71; /* Borde verde */
+  padding: 11px; /* Se resta padding para que el campo no crezca por el borde */
+}
+/* Muestra el ícono y le pone el contenido de tilde */
+label.valid .validation-icon {
+  display: block;
+}
+label.valid .validation-icon::after {
+  content: '✔';
+  color: #2ecc71; /* Color verde */
+  font-size: 1.5em;
+}
+
+/* Estilos para cuando el campo es inválido */
+label.invalid input,
+label.invalid textarea {
+  border: 2px solid #e74c3c; /* Borde rojo */
+  padding: 11px;
+}
+
+label.invalid .validation-icon {
+  display: block;
+}
+label.invalid .validation-icon::after {
+  content: '✖';
+  color: #e74c3c; /* Color rojo */
+  font-size: 1.5em;
 }
 
 /* Adaptabilidad para pantallas más pequeñas */
